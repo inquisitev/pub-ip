@@ -16,7 +16,7 @@ def clean_output(output):
 
 hostname = clean_output(subprocess.check_output(hostname_cmd, shell=True))
 ipaddrs = clean_output(subprocess.check_output(ip_command, shell=True))
-DIVIDER = {"-" * 32}
+DIVIDER = "-" * 32
 
 data = {"content": f"{DIVIDER}\nid:\n\t{TEAM_NAME}|{hostname} \nip:\n\t{ipaddrs}\n{DIVIDER}"}
 
