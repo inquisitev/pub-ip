@@ -8,7 +8,7 @@ pip install requests discord
 sudo apt install iproute2
 git clone https://github.com/inquisitev/pub-ip.git /etc/wifinotify
 cd /etc/wifinotify
-sudo chmod -x /etc/wifinotify/run.sh
+sudo chmod +x /etc/wifinotify/run.sh
 sudo cp wifinotify.service /etc/systemd/system/wifinotify.service
 
 sudo chmod 644 /etc/systemd/system/wifinotify.service
