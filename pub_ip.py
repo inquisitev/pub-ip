@@ -1,6 +1,7 @@
 import os
 import subprocess
 import requests
+import time
 
 TEAM_NAME = "default"
 
@@ -19,4 +20,11 @@ DIVIDER = {"-" * 32}
 
 data = {"content": f"{DIVIDER}\nid:\n\t{TEAM_NAME}|{hostname} \nip:\n\t{ipaddrs}\n{DIVIDER}"}
 
-response = requests.post(webhook_url, json=data)
+
+for _ in range(10):
+    try:
+        response = requests.post(webhook_url, json=data)
+        break
+    except:
+        time.sleep(5)
+        pass
