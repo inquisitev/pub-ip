@@ -7,7 +7,7 @@ with open("TEAM_NAME", "r+") as team_name_file:
 
 webhook_url = "https://discord.com/api/webhooks/1345273501199896597/5BQjVDqQQQOQr-LWtPEpjnF2-XyxyRW6kfRhGRK5RG3TdfPEaIS3MZ6FcLausGVpvsaL"
 hostname_cmd = "hostname"
-ip_command = "ifconfig | grep inet"
+ip_command = "hostname -I"
 
 
 def clean_output(output):
