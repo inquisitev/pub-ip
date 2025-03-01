@@ -1,4 +1,4 @@
-sudo rm /etc/wifinotify
+sudo rm -r /etc/wifinotify
 sudo rm /etc/systemd/system/wifinotify.service
 sudo mkdir -p /etc/wifinotify
 sudo apt install python3.11-venv
