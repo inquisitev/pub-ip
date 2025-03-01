@@ -1,1 +1,2 @@
-python3 pub_ip.py
+#!/bin/bash
+python3 /etc/wifinotify/pub_ip.py
