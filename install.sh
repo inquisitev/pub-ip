@@ -1,7 +1,7 @@
 sudo rm -r /etc/wifinotify
 sudo rm /etc/systemd/system/wifinotify.service
 sudo mkdir -p /etc/wifinotify
-sudo apt install python3.11-venv
+sudo apt install -y python3.11-venv
 python3 -m venv .venv
 source .venv/bin/activate
 pip install requests discord
