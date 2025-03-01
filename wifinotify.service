@@ -1,0 +1,11 @@
+[Unit]
+Description=Message your host name and your IP address info to a discord webhook
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/etc/wifinotify
+ExecStart=./run.sh
+
+[Install]
+WantedBy=multi-user.target
