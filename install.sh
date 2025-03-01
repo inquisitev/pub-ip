@@ -1,4 +1,8 @@
 mkdir -p /etc/wifinotify
+python3 -m venv .venv
+source .venv/bin/activate
+pip install requests discord
+sudo apt install iproute2
 git clone https://github.com/inquisitev/pub-ip.git /etc/wifinotify
 cd /etc/wifinotify
 cp wifinotify.service /etc/systemd/system/wifinotify.service
